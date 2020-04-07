@@ -1,2 +1,4 @@
 # udacity-aws-project-2
-Added the Infrasture Diagram for the project
+Added develop branch
+Added the Infrasture Diagram for the project in the develop branch
+

@@ -1,0 +1,27 @@
+Description: >
+    Moki Daniel / Udacity  devMokiudagramclone
+    This template deploys a VPC, with a pair of public and private subnets.
+    the first public subnet has a bastion attached to it. It deploys two private subnets 
+    each with a pair of webservers and a single route table. It deploys an internet 
+    gateway with a default route on the public subnets. It deploys a pair of NAT gateways one 
+    in each availability zone and default routes for them in the private subnets. It deploys a 
+    security group in the bastion, web servers and the load balancer. It deploys an
+     autoscaling group and an S3 bucket.
+Parameters:
+    EnvironmentName:
+        Description: An environment name that will be prefixed to resource names
+        Type: String
+    VpcCIDR: 
+        Description: Please enter the IP range (CIDR notation) for this VPC
+        Type: String
+        Default: 10.0.0.0/16
+Resources:
+
+    VPC: 
+        Type: AWS::EC2::VPC
+        Properties:
+            CidrBlock: !Ref VpcCIDR
+            EnableDnsHostnames: true
+            Tags: 
+                - Key: Name 
+                  Value: !Ref EnvironmentName

@@ -6,7 +6,7 @@ Description: >
     gateway with a default route on the public subnets. It deploys a pair of NAT gateways one 
     in each availability zone and default routes for them in the private subnets. It deploys a 
     security group in the bastion, web servers and the load balancer. It deploys an
-     autoscaling group and an S3 bucket.
+    autoscaling group and an S3 bucket.
 
 Parameters:
     EnvironmentName:
